@@ -78,7 +78,7 @@ And then to register them:
 
 ### Event handlers
 
-The event handlers take an event, and return a list of bound statements.  Rather than executing updates in the handler itself, it is recommended that you return the statements that you want to execute to Lagom.  This allows Lagom to batch those statements with the offset table update statement, which Lagom will then executed as a logged batch, which Cassandra executes atomically.  By doing this you can ensure exactly once processing of all events, otherwise processing may be at least once.
+The event handlers take an event, and return a list of bound statements.  Rather than executing updates in the handler itself, it is recommended that you return the statements that you want to execute to Lagom.  This allows Lagom to batch those statements with the offset table update statement, which Lagom will then execute as a logged batch, which Cassandra executes atomically.  By doing this you can ensure exactly once processing of all events, otherwise processing may be at least once.
 
 Here's an example callback for handling the `PostAdded` event:
 
