@@ -32,7 +32,7 @@ You should already have implemented tagging for your events as described in the 
 
 The other method on the `ReadSideProcessor` is `buildHandler`.  This is responsible for creating the [ReadSideHandler](api/index.html#com/lightbend/lagom/scaladsl/persistence/ReadSideProcessor.ReadSideHandler) that will handle events.  It also gives the opportunity to run two callbacks, one is a global prepare callback, the other is a regular prepare callback.
 
-[CassandraReadSide](api/index.html#com/lightbend/lagom/scaladsl/persistence/cassandra/CassandraReadSide) has a `builder` method for creating a builder for these handlers, this builder will create a handler that will automatically handle readside offsets for you.  It can be created like so:
+[CassandraReadSide](api/index.html#com/lightbend/lagom/scaladsl/persistence/cassandra/CassandraReadSide) has a `builder` method for creating a builder for these handlers, this builder will create a handler that will automatically handle read-side offsets for you.  It can be created like so:
 
 @[create-builder](code/docs/home/scaladsl/persistence/CassandraBlogEventProcessor.scala)
 
