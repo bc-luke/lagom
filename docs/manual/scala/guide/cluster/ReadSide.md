@@ -98,7 +98,7 @@ The `eventStream` method takes the event class that implements the `AggregateEve
 
 This stream will never complete, unless there is failure from retrieving the events from the database. It will continue to deliver new events as they are persisted.
 
-Each such stream of events will continuously generate queries to the persistent entity implementation (eg, Cassandra) to fetch new events and therefore this tool should be used carefully. Do not run too many such streams. It should typically not be used for service calls invoked by unknown number of clients, but it can be useful for a limited number of background processing jobs.
+Each such stream of events will continuously generate queries to the persistent entity implementation (e.g. Cassandra) to fetch new events and therefore this tool should be used carefully. Do not run too many such streams. It should typically not be used for service calls invoked by unknown number of clients, but it can be useful for a limited number of background processing jobs.
 
 ## Refactoring Consideration
 
