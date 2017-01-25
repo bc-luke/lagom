@@ -50,7 +50,7 @@ To complete the picture, a service method that delivers these `PostPublished` ev
 
 This feature is specifically for providing publish and subscribe functionality within a single services cluster. To publish and subscribe between services, you should instead use Lagom's [[message broker support|MessageBrokerApi]].
 
-Published messages may be lost. For example in case of networks problems messages might not be delivered to all subscribers. We might provide publish-subscribe with at-least-once delivery in a future release of Lagom.
+Published messages may be lost. For example, in case of network problems, messages might not be delivered to all subscribers. We might provide publish-subscribe with at-least-once delivery in a future release of Lagom.
 
 The registry of subscribers is eventually consistent, i.e. new subscribers are not immediately visible at other nodes, but typically the information will be fully replicated to all other nodes after a few seconds.
 
